@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: Welcome
         run: echo "My first action"
+      - name: Checkout a repo
+        uses: actions/checkout@v4
       - name: List files
         run: ls
       - name: Read Files
