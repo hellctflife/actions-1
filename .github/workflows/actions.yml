@@ -1,4 +1,4 @@
-
+```
 name: My first workflow
 on: push
 jobs:
@@ -10,9 +10,10 @@ jobs:
       - name: Checkout a repo
         uses: actions/checkout@v4
       - name: List files
-        run: ls
-      - name: Run Cowsay
-        run: cowsay -f dragon "DRAGON HERE..... RUN .. "
+        run: | 
+	        ls
+	        whoami
+	        host
+	        id
       - name: Read Files
         run: cat /etc/hosts
-      
