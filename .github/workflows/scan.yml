@@ -1,0 +1,13 @@
+name: Run Nmap Scan
+on: push
+jobs:
+  install_nmap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install nmap
+        run: sudo apt install -y nmap
+        
+      - name: Run Nmap Scan
+        run: nmap -v scanme.nmap.org
+
+  
