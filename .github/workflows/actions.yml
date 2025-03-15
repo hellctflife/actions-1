@@ -1,18 +1,11 @@
-name: My first workflow
+name: Run Cowsay
 on: push
 jobs:
-  first_job:
+  ascii_run:
     runs-on: ubuntu-latest
     steps:
-      - name: Welcome
-        run: echo "My first action"
-      - name: Checkout a repo
+      - name: Checkout Repo
         uses: actions/checkout@v4
-      - name: List files
-        run: | 
-         ls
-         whoami
-         host
-         id
-      - name: Read Files
-        run: cat /etc/hosts
+   
+      - name: Execute Shell Script
+        run: chmod +x ./ascii-script.sh && ./ascii-script.sh
