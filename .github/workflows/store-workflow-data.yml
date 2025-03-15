@@ -11,4 +11,17 @@ jobs:
         with:
           name: my-artifact
           path: ./hello.txt
-  
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Hello.txt
+        uses: actions/download-artifact@v3
+        with:
+          name: my-artifact
+      - name: Check the contents
+        run: cat hello.txt
+
+
+    
+    
