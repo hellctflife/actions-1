@@ -1,0 +1,14 @@
+name: Store Workflow Data
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a file
+        run: echo "Hello" > hello.txt
+      - name: Upload a file
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: ./hello.txt
+  
