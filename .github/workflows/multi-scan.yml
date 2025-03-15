@@ -1,0 +1,17 @@
+name: Multi-Scan
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Nmap on Google Mail
+        run: sudo apt install -y nmap
+      - name: Run Nmap
+        run: nmap mail.google.com
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Nmap on Google Docs
+        run: sudo apt install -y nmap
+      - name: Run Nmap
+        run: nmap docs.google.com
