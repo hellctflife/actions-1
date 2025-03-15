@@ -19,7 +19,7 @@ jobs:
       - name: Job 1
         run: echo "I am job 1"
   job4:
-    needs: job1
+    needs: [job1,job3]
     runs-on: ubuntu-latest
     steps:
       - name: Job 4
