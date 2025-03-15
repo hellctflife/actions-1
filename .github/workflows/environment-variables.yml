@@ -2,6 +2,8 @@ name: Environment Variables Playground
 on: push
 jobs:
   job1:
+    env:
+      APP_NAME: Simple APP
     runs-on: ubuntu-latest
     steps:
       - name: "Print the environment variables"
