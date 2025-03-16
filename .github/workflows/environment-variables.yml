@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Print the environment variables"
-        run: echo  ${{ env.APP_NAME }}
+        run: echo  ${{ vars.APP_NAME }}
