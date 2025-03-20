@@ -1,0 +1,10 @@
+name: Practice Workflow
+on: push
+jobs:
+  myjob:
+    runs-on: ubuntu:latest
+    steps:
+      - name: Whoami 
+        run: whoami
+        
+    
